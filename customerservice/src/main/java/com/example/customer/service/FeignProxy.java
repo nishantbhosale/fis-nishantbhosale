@@ -12,6 +12,6 @@ import com.example.customer.model.AdminDto;
 
 @FeignClient(name="videoadmin")
 public interface FeignProxy {
-	@GetMapping("admin/search/{movie_id}")
-	public Optional<AdminDto> searchMovie(@PathVariable("movie_id") int movie_id);
+	@GetMapping("admin/search/{rating}")
+	public Optional<AdminDto> searchMovie(@PathVariable("rating") int rating);
 }

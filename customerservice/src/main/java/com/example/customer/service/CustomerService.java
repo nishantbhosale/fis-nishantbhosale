@@ -9,8 +9,8 @@ import com.example.customer.model.Customer;
 
 public interface CustomerService {
 	public List<Customer> getAllCustomer();
-	public Customer insert(Customer customer);
+	public String insert(Customer customer);
 	public Customer update(Customer customer);
 	
-	public Optional<AdminDto> searchByid(int id);
+	public Optional<AdminDto> searchByrating(int rating);
 }

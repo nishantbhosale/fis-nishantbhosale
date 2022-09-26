@@ -22,15 +22,16 @@ public class CustomerServiceImpl implements CustomerService{
 	}
 
 	@Override
-	public Customer insert(Customer customer) {
+	public String insert(Customer customer) {
 		// TODO Auto-generated method stub
-		return repo.save(customer);
+		repo.save(customer);
+		return "Customer is Registered Successfully!";
 	}
 
 	@Override
-	public Optional<AdminDto> searchByid(int id) {
+	public Optional<AdminDto> searchByrating(int rating) {
 		// TODO Auto-generated method stub
-		return proxy.searchMovie(id);
+		return proxy.searchMovie(rating);
 	}
 
 	@Override
