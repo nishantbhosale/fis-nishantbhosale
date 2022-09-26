@@ -28,17 +28,18 @@ public class AdminServiceImpl implements AdminService {
 		return repo.save(model);
 	}
 
+	
 	@Override
-	public String deleteMovieData(int movie_id) {
+	public Optional<Admin> searchByrating(int rating) {
 		// TODO Auto-generated method stub
-		repo.deleteById(movie_id);
-		return "A movie record is deleted with " + movie_id + "as its movie id." ;
+		return repo.searchByrating(rating);
 	}
 
 	@Override
-	public Optional<Admin> searchByid(int id) {
+	public String deleteMovieById(int id) {
 		// TODO Auto-generated method stub
-		return repo.findById(id);
+		 repo.deleteById(id);
+		 return "Deleted !";
 	}
 
 

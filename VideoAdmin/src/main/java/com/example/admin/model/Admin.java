@@ -21,7 +21,7 @@ public class Admin {
 	String language; 
 	
 	@Column
-	String rating;
+	int rating;
 	
 	@Column
 	int duration_in_minutes;
@@ -41,7 +41,7 @@ public class Admin {
 	public Admin() {
 		
 	}
-	public Admin(int movie_id, String movie_name, int release_year, String language, String rating,
+	public Admin(int movie_id, String movie_name, int release_year, String language, int rating,
 			int duration_in_minutes, String movie_type, String director_name, String lead_actor_name1,
 			String lead_actor_name2 ) {
 		super();
@@ -82,10 +82,10 @@ public class Admin {
 	public void setLanguage(String language) {
 		this.language = language;
 	}
-	public String getRating() {
+	public int getRating() {
 		return rating;
 	}
-	public void setRating(String rating) {
+	public void setRating(int rating) {
 		this.rating = rating;
 	}
 	public int getDuration_in_minutes() {

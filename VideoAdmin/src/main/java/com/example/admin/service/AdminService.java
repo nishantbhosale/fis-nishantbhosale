@@ -9,6 +9,6 @@ public interface AdminService {
 
 	public List<Admin> findallMovieData();
 	public Admin addMovieData(Admin model);
-	public String deleteMovieData(int movie_id);
-	public Optional<Admin> searchByid(int id);
+	public String deleteMovieById(int id);
+	public Optional<Admin> searchByrating(int rating);
 }
